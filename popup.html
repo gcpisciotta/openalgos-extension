@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+</head>
+
+<body>
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+        <div class="logo-wrapper">
+            <img src="images/logo.png" height="40" width="40" alt="#" tite="Open Algos Logo" >
+            <h2 style="margin: 0;">Open Algos</h2>
+        </div>
+        <div class="menu-item-wrapper">
+            <div class="menu-item selected" data-tab="profile">
+                <img src="images/account.png" alt="Profile Icon">
+                <span class="menu-item-text">Profile</span>
+            </div>
+
+            <div class="menu-item" data-tab="marketplace" id="marketplace-tab">
+                <img src="images/search.png" alt="Marketplace Icon">
+                <span class="menu-item-text">Marketplace</span>
+            </div>
+            <div class="menu-item" data-tab="filter">
+                <img src="images/filter.png" alt="Filter Icon">
+                <span class="menu-item-text">Filter</span>
+            </div>
+            <div class="menu-item" data-tab="boost">
+                <img src="images/boost.png" alt="Boost Icon">
+                <span class="menu-item-text">Boost</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="profile" class="tab-content active">
+        <!-- Profile content goes here -->
+        <h2>Enabled Algorithms</h2>
+        <div id="profile-algo-list">
+            <!-- Algos will be populated here -->
+        </div>
+        <div class="footer">
+            <div class="cta-wrapper">
+                <button class="cta-btn" id="switch-to-marketplace">Add Algos</button>
+                <a href="https://openalgos.ai/#create" class="cta-btn" target="_blank">
+                    Create Your Own
+                </a>
+            </div>
+            <!-- about and link to openalgos.ai -->
+            <div class="about-wrapper" style="margin-top: 0.5rem;">
+                <p>
+                    <a href="https://openalgos.ai" target="_blank">About Open Algos</a>
+                </p>
+            </div>  
+        </div>
+    </div>
+    <div id="marketplace" class="tab-content">
+        <!-- Marketplace content goes here -->
+        <h2>Search for Algorithms</h2>
+        <div class="search-input-wrapper"> <!-- Wrapper around input and button -->
+            <input type="text" id="search-algos" placeholder="Search our library of algorithms">
+            <button id="search-algo-btn" title="Search"></button>
+        </div>
+        <div id="algo-list">
+            <!-- Algos will be populated here -->
+        </div>
+    </div>
+    <div id="filter" class="tab-content">
+        <!-- Filter content goes here -->
+        <h2>Blocked Keywords</h2>
+        <p>Enter a keyword to block videos containing it in their title.</p>
+        <div class="filter-input-wrapper"> <!-- Wrapper around input and button -->
+            <input type="text" id="filter-words" placeholder="Enter a filter word">
+            <button id="set-filter-word">Add</button>
+        </div>
+        <div id="filter-words-container"></div>
+    </div>
+
+
+
+    <div id="boost" class="tab-content">
+        <!-- Boost content goes here -->
+        <h2>Boosted Keywords</h2>
+        <p>Enter a keyword to only show videos containing it in their title or description.</p>
+        <div class="filter-input-wrapper">
+            <input type="text" id="boost-words" placeholder="Enter a boost word">
+            <button id="set-boost-word">Add</button>
+        </div>
+        <div id="boost-words-container"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

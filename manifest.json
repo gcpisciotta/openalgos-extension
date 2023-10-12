@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "OpenAlgo",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/logo.png",
+      "32": "/images/logo.png",
+      "48": "/images/logo.png",
+      "128": "/images/logo.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+      
+    }
+  ],
+
+  "background": {
+    "type": "module",
+    "icons" : {
+      "16": "/images/logo.png",
+      "32": "/images/logo.png",
+      "48": "/images/logo.png",
+      "128": "/images/logo.png"
+    }
+  }
+}
+
